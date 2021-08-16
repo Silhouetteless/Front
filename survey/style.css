@@ -1,0 +1,123 @@
+body {
+    background-image: url("https://cdn.pixabay.com/photo/2013/11/28/10/02/camera-219958_1280.jpg");
+}
+
+#container{
+    border: 5px solid rgba(247, 215, 169, 0.2);
+    background-color: rgba(112, 72, 46, 0.8);
+    border-radius: 50px 20px;
+     
+     height: 500px;
+     width: 500px;
+     padding: 20px;
+
+     position: absolute;
+     left: 50%;
+     top: 50%;
+
+     margin: -270px 0 0 -270px;
+
+     
+}
+
+main{
+    font-family: 'Raleway', sans-serif;
+    
+
+    justify-content: center;
+    align-items: center;
+    margin: auto; 
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+
+header {
+    text-transform: uppercase;
+    font-family: 'Redressed', cursive;
+
+    color: #FFFFFF;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 0.5;
+    margin: 10px 10px 10px 10px;
+    padding: 10px;
+}
+
+#survey-form {
+    position: relative;
+    color:  #FFFFFF;
+    font-size: 12px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 80%;
+    height: 60%;
+    margin: auto;
+    padding: 10px;
+    line-height: 1.2;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+
+body ::-webkit-scrollbar {
+    width: 3px;
+}
+
+body ::-webkit-scrollbar-thumb {
+background: #5c2c00;
+}
+
+body ::-webkit-scrollbar-track {
+background-color: #ffac68;
+box-shadow: inset 0 0 6px rgba(152, 167, 211, 0.2);
+}
+
+.form-group::pseudo-element {
+    display: block;
+    box-sizing: border-box;
+
+}
+
+.radio-label {
+    font-size: 12px;
+    display: inline-block;
+    margin-bottom: 2px;
+    align-items: auto;
+
+} 
+
+
+label {
+    display: block;
+    font-size: 16px;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.input-control, #dropdown {
+    border-radius: 4px;
+    padding: 3px 3px;
+    margin-bottom: 10px;
+    width: 50%
+}
+
+.input-textarea {
+    width: 60%;
+    border-radius: 4px;
+}
+
+
+.checkbox-label {
+    display: inline;
+    font-size: 12px;
+    margin-bottom: 10px;
+    padding-right: 20px;
+}
+
+.chr-control {
+    display: inline-block;
+}

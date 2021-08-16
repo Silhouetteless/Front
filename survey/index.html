@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&family=Redressed&display=swap" rel="stylesheet">
+
+    <title>Survey Form</title>
+</head>
+<body>
+    <div id="container">
+        <main>
+            <header>
+                <h1 id="title">Photography survey</h1>
+                <p id="description">A short survey for amateur photographers</p>
+            </header>
+            <form id="survey-form">
+                <div class="form-group">
+                        <label id="name-label" for="name">Name</label>
+                        <input type="text" id="name" name="name" class="input-control" placeholder="John Smith" required>
+                </div>
+                <div class="form-group">
+                        <label id="email-label" for="email">E-mail</label>
+                        <input type="email" id="email" name="email" class="input-control"  placeholder="johnsmith@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label id="number-label" for="age">Age</label>
+                    <input type="number" id="number" name="age" class="input-control" placeholder="23" min="13" max="90">
+                </div>
+                <div class="form-group">
+                    <label id="phototype-label" for="phototype">Type of photography you take:</label>
+                    <select id="dropdown" name="phototype">
+                        <option value="Portrait Photography">Portrait Photography</option>
+                        <option value="Fashion Photography">Fashion Photography</option>
+                        <option value="Sports Photography">Sports Photography</option>
+                        <option value="Still life Photography">Still life Photography</option>
+                        <option value="Landscape Photography">Landscape Photography</option>
+                        <option value="Nature Photography">Nature Photography</option>
+                        <option value="Architectural Photography">Architectural Photography</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>How long have you been taking photos?</label>
+                    <label class="radio-label"><input name="practice" value="less1" type="radio" checked class="chr-control">Less than a year</input></label>
+                    <label class="radio-label"><input name="practice" value="1to5" type="radio" class="chr-control">More than a year, but less than 5 years</input></label>
+                    <label class="radio-label"><input name="practice" value="more5" type="radio" class="chr-control">More than 5 years</input></label>
+                </div>
+                <div class="form-group">
+                    <label id="question-label">Where do you post your photos?</label>
+                    <input name="question" value="option1" type="checkbox" class="chr-control"><label class="checkbox-label">Instagram</label></input>
+                    <input name="question" value="option2" type="checkbox" class="chr-control"><label class="checkbox-label">DeviantArt</label></input>
+                    <input name="question" value="option3" type="checkbox" class="chr-control"><label class="checkbox-label">Other</label></input>
+                </div>
+                <div class="form-group">
+                    <label id="comments-label">Additional comments</label>
+                    <textarea id="comments" name="comments" class="input-textarea" placeholder="I love photography."></textarea>
+                </div>
+                <div class="form-group">
+                    <button id="submit" type="submit">Submit</button>
+                </div>
+            </form>
+            </main>
+        </div>
+</body>
+</html>
