@@ -1,0 +1,15 @@
+function Animal() { }
+Animal.prototype.eat = function() { console.log("nom nom nom"); };
+
+function Dog() { }
+//setting Dog as a child instance of Animal parent 
+Dog.prototype = Object.create(Animal.prototype);
+//reseting inherited constructor
+Dog.prototype.constructor = Dog;
+//adding own property
+Dog.prototype.bark = function() {
+  console.log("Woof!");
+}
+
+
+let beagle = new Dog();
