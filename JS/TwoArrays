@@ -1,6 +1,17 @@
 function whatIsInAName(collection, source) {
   const arr = [];
   // Only change code below this line
+  //getting the name from the source array:
+  var srcName = Object.keys(source);
+
+  //getting all the keys that match with the srcName
+  var matchingName = collection.map(function (elem) {
+     return elem[srcName]; 
+  });
+
+//return matchingName.filter((item) => item === source[srcName]);
+
+
 
 
   // Only change code above this line
