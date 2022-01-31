@@ -1,21 +1,21 @@
 function whatIsInAName(collection, source) {
-  const arr = [];
   // Only change code below this line
-  //getting the name from the source array:
-  var srcName = Object.keys(source);
+var srcName = Object.keys(source);
 
-  //getting all the keys that match with the srcName
-  var matchingName = collection.map(function (elem) {
-     return elem[srcName]; 
+
+return collection.filter(function(elem) {
+  return srcName.every(function(key) {
+      console.log("elem[srcName]: " + elem[key] + " === srcVal: " + source[key]);
+      if(elem[key] === source[key] && elem.hasOwnProperty(key)) {
+        return true;
+      }
   });
-
-//return matchingName.filter((item) => item === source[srcName]);
-
-
-
+});
 
   // Only change code above this line
-  return arr;
+ 
 }
 
-whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" });
+console.log(whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" }));
+
+console.log("the results: " + whatIsInAName([{ "apple": 1, "bat": 2 }, { "apple": 1 }, { "apple": 1, "bat": 2, "cookie": 2 }], { "apple": 1, "cookie": 2 }));
