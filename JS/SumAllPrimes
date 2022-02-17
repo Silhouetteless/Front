@@ -1,0 +1,35 @@
+function sumPrimes(num) {
+  let sum = 0;
+
+//we are starting from 2 because we know 1 is not a prime
+  for(let curNum = 2; curNum <= num; curNum ++) {
+     
+     //creating an array where we will keep primes
+    let curSum = [];
+
+          
+         for(let i = 1; i < curNum; i++) {
+         
+              //if the current number divided by the current i gives division remainder equal to 0 add a char to the curSum array
+             if(curNum % i == 0) {
+                         curSum.push(i);
+             } 
+             
+             //stop the loop if there are at least 2 characters in the curSum array 
+             if(curSum.length >= 2) {
+                      break;
+             }
+             
+         }    
+              //if there are less than 2 characters in the curSum array it means the number is a prime, so we add it to the total sum
+             if(curSum.length < 2) {
+                     sum += curNum; 
+             }  
+                       
+  }
+
+return sum;
+
+}
+
+console.log("Result: " + sumPrimes(977));
